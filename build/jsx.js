@@ -30,8 +30,19 @@ var DemoComponent = function (_Component) {
     (0, _inherits3.default)(DemoComponent, _Component);
 
     function DemoComponent() {
+        var _Object$getPrototypeO;
+
+        var _temp, _this, _ret;
+
         (0, _classCallCheck3.default)(this, DemoComponent);
-        return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(DemoComponent).apply(this, arguments));
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_Object$getPrototypeO = (0, _getPrototypeOf2.default)(DemoComponent)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.handleClick = function () {
+            console.log('======');
+        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
 
     (0, _createClass3.default)(DemoComponent, [{
@@ -39,7 +50,7 @@ var DemoComponent = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 'h1',
-                null,
+                { onClick: this.handleClick },
                 'Hello World'
             );
         }
